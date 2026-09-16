@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Johnny's Pizza</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff7e8;
+      color: #222;
+    }
+
+    header {
+      background: #d62828;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 18px;
+    }
+
+    .menu {
+      max-width: 800px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .pizza {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px #00000015;
+    }
+
+    .pizza-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .pizza h3 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .price {
+      color: #d62828;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .pizza p {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      background: #d62828;
+      color: white;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    button:active {
+      background: #a91f1f;
+    }
+
+    #cart {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 18px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍕 Johnny's Pizza</h1>
+  <p>Hot • Fresh • Delicious</p>
+</header>
+
+<div id="cart">
+  🛒 Cart: <span id="count">0</span> pizzas
+</div>
+
+<div class="menu">
+
+  <h2>Our Menu</h2>
+
+  <div class="pizza">
+    <div class="pizza-top">
+      <h3>🍕 Margherita</h3>
+      <span class="price">$14.99</span>
+    </div>
+    <p>Tomato sauce, mozzarella, fresh basil and olive oil.</p>
+    <button onclick="addPizza()">Add to Cart</button>
+  </div>
+
+  <div class="pizza">
+    <div class="pizza-top">
+      <h3>🍕 Pepperoni</h3>
+      <span class="price">$17.99</span>
+    </div>
+    <p>Mozzarella, tomato sauce and loads of crispy pepperoni.</p>
+    <button onclick="addPizza()">Add to Cart</button>
+  </div>
+
+  <div class="pizza">
+    <div class="pizza-top">
+      <h3>🍕 BBQ Chicken</h3>
+      <span class="price">$19.99</span>
+    </div>
+    <p>BBQ chicken, mozzarella, red onion and smoky BBQ sauce.</p>
+    <button onclick="addPizza()">Add to Cart</button>
+  </div>
+
+  <div class="pizza">
+    <div class="pizza-top">
+      <h3>🍕 Meat Lovers</h3>
+      <span class="price">$21.99</span>
+    </div>
+    <p>Pepperoni, bacon, ham, sausage and mozzarella.</p>
+    <button onclick="addPizza()">Add to Cart</button>
+  </div>
+
+  <div class="pizza">
+    <div class="pizza-top">
+      <h3>🌶️ Spicy Supreme</h3>
+      <span class="price">$20.99</span>
+    </div>
+    <p>Pepperoni, capsicum, onion, jalapeños and chilli flakes.</p>
+    <button onclick="addPizza()">Add to Cart</button>
+  </div>
+
+</div>
+
+<script>
+  let pizzas = 0;
+
+  function addPizza() {
+    pizzas++;
+    document.getElementById("count").textContent = pizzas;
+  }
+</script>
+
+</body>
+</html>
